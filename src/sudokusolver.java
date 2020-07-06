@@ -14,7 +14,10 @@ public class sudokusolver {
             for(int columns = 0; columns < board[rows].length; columns++){
                 int n = rand.nextInt(9) + 1;
                 board[rows][columns] = n;
-                System.out.println(board[rows][columns]);
+                System.out.print(board[rows][columns]);
+                if(columns == 8){
+                    System.out.print("\n");
+                }
 
             }
         }
