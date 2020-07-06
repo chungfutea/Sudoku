@@ -53,7 +53,8 @@ public class sudokusolver {
     }
 
     public static void main(String[] args){
-        asdfjk;lasdfjk;l
+        sudokusolver sudoku = new sudokusolver();
+        sudoku.fillBoard();
 
 
     }
