@@ -53,7 +53,7 @@ public class sudokusolver {
     }
 
     public static void main(String[] args){
-        fkdkgmkgmdfmk
+        asdfjk;lasdfjk;l
 
 
     }
