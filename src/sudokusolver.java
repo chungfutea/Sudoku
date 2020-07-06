@@ -8,16 +8,30 @@ public class sudokusolver {
 
     //function that fills the sudoku board with numbers
     public void fillBoard(){
+        for(int rows = 0; rows < board.length; rows++) {
+            for (int columns = 0; columns < board[rows].length; columns++) {
+                board[rows][columns] = 0;
+            }
+        }
         Random rand = new Random();
 
         for(int rows = 0; rows < board.length; rows++){
             for(int columns = 0; columns < board[rows].length; columns++){
+
                 int n = rand.nextInt(9) + 1;
-                board[rows][columns] = n;
-                System.out.print(board[rows][columns]);
-                if(columns == 8){
-                    System.out.print("\n");
+                System.out.println(n);
+                boolean checkR = checkRow(rows, n);
+                //boolean checkC = checkColumn(columns, n);
+                System.out.println(checkR);
+                while(checkR == false){
+                    n = rand.nextInt(9) + 1;
                 }
+                System.out.println(checkR);
+                board[rows][columns] = n;
+                //System.out.print(board[rows][columns]);
+                //if(columns == 8){
+                //    System.out.print("\n");
+                //}
 
             }
         }
